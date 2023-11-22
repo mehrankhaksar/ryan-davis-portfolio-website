@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import ThemeToggler from "./ThemeToggler";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const [scroll, setScroll] = React.useState(false);
@@ -42,9 +43,12 @@ const Header = () => {
             <Nav
               containerStyles="hidden xl:flex items-center gap-x-5"
               linkStyles="relative transition-all hover:text-primary"
-              underlineStyles="w-full h-1 absolute top-full left-0 bg-primary rounded-sm"
+              activeLinkStyles="w-full h-1 absolute top-full left-0 bg-primary rounded-sm"
             />
             <ThemeToggler />
+            <div className="flex xl:hidden">
+              <MobileNav />
+            </div>
           </div>
         </div>
       </div>

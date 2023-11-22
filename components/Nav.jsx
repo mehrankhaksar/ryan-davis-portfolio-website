@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-const underlineVariants = {
+const activeLinkVariants = {
   initial: { y: "-100%" },
   animate: {
     y: 0,
@@ -28,7 +28,12 @@ const links = [
   },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav = ({
+  mobileNav = false,
+  containerStyles,
+  linkStyles,
+  activeLinkStyles,
+}) => {
   const pathname = usePathname();
 
   return (
@@ -41,14 +46,14 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
         >
           {item.pathname === pathname && (
             <motion.span
-              className={underlineStyles}
-              variants={underlineVariants}
+              className={activeLinkStyles}
+              variants={!mobileNav && activeLinkVariants}
               initial="initial"
               animate="animate"
-              layoutId="underline"
+              layoutId="active-link"
             />
           )}
-          {item.name}
+          <span className="relative">{item.name}</span>
         </Link>
       ))}
     </nav>

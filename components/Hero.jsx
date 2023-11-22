@@ -38,7 +38,7 @@ const Hero = () => {
             </div>
             <SocialMedia
               containerStyles="flex justify-center items-center gap-5 xl:justify-start"
-              iconStyles="text-2xl text-muted-foreground transition-all hover:text-primary"
+              iconStyles="text-2xl text-muted-foreground"
             />
           </div>
           <div className="hidden relative xl:flex">

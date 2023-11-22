@@ -36,7 +36,11 @@ const SocialMedia = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socialMedia.map((item, index) => (
-        <Link className={iconStyles} href={item.pathname} key={index}>
+        <Link
+          className={`transition-all hover:text-primary ${iconStyles}`}
+          href={item.pathname}
+          key={index}
+        >
           {item.icon}
         </Link>
       ))}
