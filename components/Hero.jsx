@@ -12,7 +12,7 @@ import Badge from "./Badge";
 
 const Hero = () => {
   return (
-    <section className="h-[90vh] bg-hero bg-no-repeat bg-cover bg-bottom py-12 dark:bg-none">
+    <section className="bg-hero bg-no-repeat bg-cover bg-bottom py-12 dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div className="max-w-md space-y-5 text-center mx-auto xl:text-left xl:mx-0">
@@ -57,7 +57,7 @@ const Hero = () => {
             />
             <Badge
               containerStyles="absolute bottom-[15%] right-0"
-              icon={<RiTodoFill />}
+              icon={<RiTeamFill />}
               endCountNum={9}
               endCountText="K"
               badgeText="Happy Clients"
