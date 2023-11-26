@@ -61,7 +61,20 @@
 }
 
 .h1 {
-  @apply text-6xl font-bold tracking-[-2.5px] xl:leading-[70px];
+  @apply text-6xl font-extrabold;
+}
+
+.h2 {
+  @apply text-5xl font-bold;
+}
+
+.h1,
+.h2 {
+  @apply tracking-[-2.5px] xl:leading-[70px];
+}
+
+.section-title {
+  @apply flex justify-center items-center gap-2.5 text-3xl font-extrabold before:w-[25px] before:h-[25px] before:bg-dots_light before:bg-no-repeat before:bg-center;
 }
 
 .description {
